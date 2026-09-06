@@ -4,20 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beneficios de la IA 2026</title>
-    <!-- Fuentes Elegantes Tecnológicas -->
+    <!-- Tipografías Tecnológicas -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            /* Paleta Monocromática en Tonalidades Azules */
             --bg-deep: #030a16;          
             --bg-surface: #0a192f;       
             --bg-card-hover: #112240;    
             --blue-glow: #00b4d8;        
             --blue-electric: #00f0ff;    
-            --blue-vibrant: #0077b6;     
             --text-ice: #f0f9ff;         
             --text-soft-blue: #93c5fd;   
             --border-blue: rgba(56, 189, 248, 0.25);
@@ -42,7 +40,7 @@
             letter-spacing: 1.5px;
         }
 
-        /* Fondos Animados de Neón Azul */
+        /* Luces de fondo */
         .bg-glow-1, .bg-glow-2 {
             position: fixed;
             border-radius: 50%;
@@ -57,7 +55,6 @@
             width: 500px;
             height: 500px;
             background: radial-gradient(circle, rgba(0, 240, 255, 0.12) 0%, rgba(3, 10, 22, 0) 70%);
-            animation: floatGlow 10s infinite alternate ease-in-out;
         }
 
         .bg-glow-2 {
@@ -66,12 +63,6 @@
             width: 600px;
             height: 600px;
             background: radial-gradient(circle, rgba(0, 119, 182, 0.2) 0%, rgba(3, 10, 22, 0) 70%);
-            animation: floatGlow 14s infinite alternate-reverse ease-in-out;
-        }
-
-        @keyframes floatGlow {
-            0% { transform: translate(0, 0) scale(0.9); }
-            100% { transform: translate(40px, 30px) scale(1.1); }
         }
 
         .container {
@@ -122,7 +113,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
             gap: 1.5rem;
-            margin-bottom: 4rem;
+            margin-bottom: 5rem;
         }
 
         .stat-card {
@@ -132,32 +123,13 @@
             padding: 2rem 1.5rem;
             text-align: center;
             backdrop-filter: blur(12px);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .stat-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, var(--blue-electric), transparent);
-            transform: translateX(-100%);
-            transition: transform 0.6s ease;
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
         .stat-card:hover {
-            transform: translateY(-10px);
-            background: var(--bg-card-hover);
+            transform: translateY(-8px);
             border-color: var(--blue-electric);
             box-shadow: 0 10px 30px rgba(0, 240, 255, 0.15);
-        }
-
-        .stat-card:hover::before {
-            transform: translateX(100%);
         }
 
         .stat-number {
@@ -173,15 +145,13 @@
             color: var(--text-soft-blue);
             text-transform: uppercase;
             letter-spacing: 1px;
-            font-weight: 500;
         }
 
-        /* Sección de Imagen Destacada (Showcase) */
+        /* Contenedor de la Imagen */
         .image-showcase {
-            margin-bottom: 5rem;
+            margin-bottom: 6rem;
             display: flex;
             justify-content: center;
-            align-items: center;
         }
 
         .image-frame {
@@ -190,14 +160,9 @@
             width: 100%;
             border-radius: 24px;
             padding: 8px;
-            background: linear-gradient(135deg, rgba(0, 240, 255, 0.6), rgba(0, 119, 182, 0.2), rgba(0, 240, 255, 0.4));
-            box-shadow: 0 0 35px rgba(0, 240, 255, 0.25), 0 0 70px rgba(0, 119, 182, 0.15);
-            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .image-frame:hover {
-            transform: scale(1.02);
-            box-shadow: 0 0 50px rgba(0, 240, 255, 0.5), 0 0 100px rgba(0, 240, 255, 0.3);
+            background: linear-gradient(135deg, rgba(0, 240, 255, 0.8), rgba(0, 119, 182, 0.3));
+            box-shadow: 0 0 40px rgba(0, 240, 255, 0.3);
+            will-change: transform, opacity;
         }
 
         .image-content {
@@ -205,7 +170,6 @@
             height: auto;
             display: block;
             border-radius: 18px;
-            object-fit: cover;
         }
 
         /* Secciones e Información */
@@ -230,7 +194,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
             gap: 2rem;
-            margin-bottom: 5rem;
+            margin-bottom: 6rem;
         }
 
         .info-card {
@@ -238,20 +202,12 @@
             border: 1px solid var(--border-blue);
             border-radius: 16px;
             padding: 2.2rem;
-            transition: all 0.3s ease;
             backdrop-filter: blur(10px);
-        }
-
-        .info-card:hover {
-            border-color: var(--blue-glow);
-            box-shadow: 0 0 20px rgba(0, 180, 216, 0.15);
-            transform: translateY(-5px);
         }
 
         .info-card h3 {
             color: var(--blue-electric);
             margin-bottom: 1.2rem;
-            font-size: 1.2rem;
         }
 
         .info-card ul {
@@ -263,7 +219,6 @@
             position: relative;
             padding-left: 1.4rem;
             color: var(--text-soft-blue);
-            font-size: 0.98rem;
         }
 
         .info-card li::before {
@@ -271,10 +226,9 @@
             position: absolute;
             left: 0;
             color: var(--blue-electric);
-            font-size: 0.8rem;
         }
 
-        /* Tabla Estilizada Tecnológica */
+        /* Tabla */
         .table-container {
             overflow-x: auto;
             background: rgba(10, 25, 47, 0.8);
@@ -282,7 +236,6 @@
             border: 1px solid var(--border-blue);
             margin-bottom: 5rem;
             padding: 1.5rem;
-            backdrop-filter: blur(10px);
         }
 
         table {
@@ -307,11 +260,6 @@
             border-bottom: 1px solid rgba(56, 189, 248, 0.1);
         }
 
-        tr:hover td {
-            background: rgba(0, 240, 255, 0.05);
-            color: var(--text-ice);
-        }
-
         footer {
             text-align: center;
             color: var(--text-soft-blue);
@@ -319,18 +267,6 @@
             padding: 2rem 0;
             border-top: 1px solid var(--border-blue);
             opacity: 0.8;
-        }
-
-        /* Animación Scroll Reveal */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px) scale(0.98);
-            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0) scale(1);
         }
     </style>
 </head>
@@ -340,14 +276,14 @@
     <div class="bg-glow-2"></div>
 
     <div class="container">
-        <header class="reveal">
+        <header>
             <span class="tag-badge">Informe Global 2026</span>
             <h1>Beneficios Clave de la IA</h1>
             <p class="subtitle">Análisis actualizado de impacto global, productividad, salud y sostenibilidad en la economía digital[cite: 1].</p>
         </header>
 
-        <!-- Métricas Principales -->
-        <section class="stats-grid reveal">
+        <!-- Tarjetas Métricas -->
+        <section class="stats-grid">
             <div class="stat-card">
                 <div class="stat-number">+27% a 70%</div>
                 <div class="stat-label">Aumento Productividad Empresarial[cite: 1]</div>
@@ -366,16 +302,16 @@
             </div>
         </section>
 
-        <!-- Imagen Destacada con Resplandor al Hacer Scroll -->
-        <section class="image-showcase reveal">
+        <!-- Imagen con ScrollTrigger Parallax/Scale -->
+        <section class="image-showcase">
             <div class="image-frame">
                 <img src="Gemini_Generated_Image_ts8j2pts8j2pts8j.jpg" alt="Ecosistema de Inteligencia Artificial" class="image-content">
             </div>
         </section>
 
-        <!-- Secciones de Impacto -->
-        <h2 class="section-title reveal">Sectores de Impacto</h2>
-        <section class="cards-grid reveal">
+        <!-- Tarjetas de Información -->
+        <h2 class="section-title gs-title">Sectores de Impacto</h2>
+        <section class="cards-grid">
             <div class="info-card">
                 <h3>1. Productividad & Operaciones</h3>
                 <ul>
@@ -402,9 +338,9 @@
             </div>
         </section>
 
-        <!-- Matriz de Impacto -->
-        <h2 class="section-title reveal">Matriz Sectorial</h2>
-        <div class="table-container reveal">
+        <!-- Matriz Sectorial -->
+        <h2 class="section-title gs-title">Matriz Sectorial</h2>
+        <div class="table-container">
             <table>
                 <thead>
                     <tr>
@@ -448,23 +384,72 @@
         </footer>
     </div>
 
+    <!-- Librerías GSAP y ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
     <script>
-        function revealOnScroll() {
-            const reveals = document.querySelectorAll('.reveal');
-            const windowHeight = window.innerHeight;
+        gsap.registerPlugin(ScrollTrigger);
 
-            reveals.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 80;
+        // Animación del Encabezado al cargar
+        gsap.from("header", {
+            duration: 1.2,
+            y: -50,
+            opacity: 0,
+            ease: "power3.out"
+        });
 
-                if (elementTop < windowHeight - elementVisible) {
-                    element.classList.add('active');
-                }
-            });
-        }
+        // ScrollTrigger para las Tarjetas de Métricas
+        gsap.from(".stat-card", {
+            scrollTrigger: {
+                trigger: ".stats-grid",
+                start: "top 80%",
+            },
+            duration: 0.8,
+            y: 50,
+            opacity: 0,
+            stagger: 0.15,
+            ease: "back.out(1.7)"
+        });
 
-        window.addEventListener('scroll', revealOnScroll);
-        revealOnScroll();
+        // ScrollTrigger para la Imagen (Efecto Parallax y aumento de resplandor al desplazar)
+        gsap.from(".image-frame", {
+            scrollTrigger: {
+                trigger: ".image-showcase",
+                start: "top 85%",
+                end: "bottom 30%",
+                scrub: 1
+            },
+            scale: 0.8,
+            opacity: 0.3,
+            boxShadow: "0 0 0px rgba(0, 240, 255, 0)"
+        });
+
+        // ScrollTrigger para las Tarjetas Informativas
+        gsap.from(".info-card", {
+            scrollTrigger: {
+                trigger: ".cards-grid",
+                start: "top 80%",
+            },
+            duration: 0.8,
+            y: 60,
+            opacity: 0,
+            stagger: 0.2,
+            ease: "power2.out"
+        });
+
+        // ScrollTrigger para la Tabla
+        gsap.from("tbody tr", {
+            scrollTrigger: {
+                trigger: ".table-container",
+                start: "top 80%",
+            },
+            duration: 0.6,
+            x: -40,
+            opacity: 0,
+            stagger: 0.1,
+            ease: "power2.out"
+        });
     </script>
 </body>
 </html>
